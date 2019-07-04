@@ -153,8 +153,10 @@
 				date = date < 10 ? `0${date}` : date
 				let time = ''
 				if (this.timeOptions.length) {
-					let timindex = indexArr[3] ? indexArr[3] : 0
+					let timindex = indexArr[3]>0 ? indexArr[3] : 0
+					console.log(timindex,'timindex',indexArr)
 					time = this.array[3][timindex]
+					console.log(this.array[3],this.array[3][timindex],'this.array[3][timindex]')
 				} else {
 					let hourindex = indexArr[3] ? indexArr[3] : 0
 					let hour = parseInt(this.array[3][hourindex])
@@ -226,7 +228,6 @@
 				// 回选时间选项为指定选项
 				if (this.timeOptions.length) {
 					let index = 0
-					console.log(value, 'value')
 					index = this.array[3].findIndex(
 						items => items === value[1]
 					)
@@ -267,11 +268,8 @@
 				if (!minDate) {
 					return false
 				}
-				console.log(minDate, 'minDate!!!!!')
-
 				minDate = minDate && minDate.split('-')
 				let maxDate = this.moment(this.maxDate, 'date')
-				console.log(maxDate, 'maxDate!!!!!')
 				maxDate = maxDate && maxDate.split('-')
 				let yearStar = minDate[0] && minDate[0] ? parseInt(minDate[0]) : 1900
 				let yearEnd = maxDate[0] ? parseInt(maxDate[0]) : 2050
@@ -404,7 +402,6 @@
 				let minsArr = []
 				let mintobj = {}
 
-				console.log(hourStar, hourEnd, '时间', end)
 				for (let i = hourStar; i <= hourEnd; i++) {
 					let itex = i < 10 ? `0${i}` : i
 					hourArr.push(`${itex}时`)

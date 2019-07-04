@@ -43,7 +43,7 @@
 </template>
 
 <script>
-	import dyDatetimePicker from '../../components/dateTime'
+	import dyDatetimePicker from '../../components/lanxiujuan-dyDateTime/lanxiujuan-dyDateTime.vue'
 	export default {
 		components: {
 			dyDatetimePicker
