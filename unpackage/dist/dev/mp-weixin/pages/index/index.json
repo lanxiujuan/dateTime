@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "日期时间选择组件",
+  "usingComponents": {
+    "dy-datetime-picker": "/components/dateTime"
+  }
+}

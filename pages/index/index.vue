@@ -1,16 +1,16 @@
 <template>
 	<view class="content">
 			<view class="item">
-			<div class="lable">指定开始时间：</div>
+			<div class="lable">限定最小选择日期：</div>
 			<view class="time">
-				<dy-Datetime-Picker :value="childValue" :placeholder="placeholder" :timeOptions="timeOptions" :maxDate="maxDate"
-				 :minDate="minDate" :minTime="minTime" :maxTime="maxTime" @getData="getData" :timeIntervalMsec="timeIntervalMsec"
+				<dy-Datetime-Picker  :placeholder="placeholder" :maxDate="maxDate"
+				 :minDate="minDate" @getData="getData" :timeIntervalMsec="timeIntervalMsec"
 				 :type="timeType"></dy-Datetime-Picker>
 			</view>
 		</view>
 		<!--  -->
 		<view class="item">
-			<div class="lable">指定结束时间：</div>
+			<div class="lable">限定最大选择日期：</div>
 			<view class="time">
 				<dy-Datetime-Picker :placeholder="placeholder" :maxDate="maxDate" @getData="getData"></dy-Datetime-Picker>
 			</view>
@@ -20,14 +20,14 @@
 	<view class="item">
 			<div class="lable">指定开始结束时间：</div>
 			<view class="time">
-				<dy-Datetime-Picker :value="childValue" :placeholder="placeholder" :maxDate="maxDate"
+				<dy-Datetime-Picker :placeholder="placeholder" :maxDate="maxDate"
 				 :minDate="minDate" :minTime="minTime" :maxTime="maxTime" @getData="getData" 
 				 :type="timeType"></dy-Datetime-Picker>
 			</view>
 		</view>
 		
 		<!--  -->
-		<!-- 时间为固定选项时  传入固定选项数组 -->
+		<!-- 时间为固定选项时  传入固定选项数组 timeOptions -->
 		<view class="item">
 			<div class="lable">指定时间选项：</div>
 			<view class="time">
@@ -110,6 +110,7 @@
 	}
 
 	.item {
+		box-sizing: border-box;
 		width: 100%;
 		height: 40px;
 		line-height: 40px;

@@ -1,0 +1,1 @@
+<picker mode="multiSelector" value="{{index}}" range="{{array}}" data-event-opts="{{[['change',[['bindTimeChange',['$event']]]],['columnchange',[['columnchange',['$event']]]]]}}" bindchange="__e" bindcolumnchange="__e" bind:__l="__l"><block wx:if="{{timeValue}}"><view class="uni-input">{{timeValue+''}}</view></block><block wx:else><view>{{placeholder}}</view></block></picker>
