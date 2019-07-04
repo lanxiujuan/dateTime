@@ -64,7 +64,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
       childValue: '2013-10-12 03:30',
       placeholder: '请选择开始时间',
       // 最小日期
-      minDate: '2011-12-12',
+      minDate: '2011-10-12',
       // 最大日期
       maxDate: '2019-08-12',
       defaultMinDate: new Date('2001-1-3').getTime(),
@@ -90,10 +90,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   onLoad: function onLoad() {
 
     this.timeOptions = [
-    '00:30',
-    '02:30',
-    '03:30',
-    '04:30'];
+    '9:00-12:00',
+    '13:00-18:00',
+    '18:00-23:00'];
 
   },
   methods: {
