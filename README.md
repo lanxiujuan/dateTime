@@ -15,4 +15,6 @@
 ### 7 :maxTime="maxTime"  传入最大可选择时间 如20:00 默认为：23:59
 ![image](https://github.com/lanxiujuan/dateTime/blob/master/images/img5.jpg)			
 				
-- 2019-07-23 更新
+- 2019-07-23 更新缺陷修复 
+1、修复小程序端最大最小时间报错问题 传入value值若不为时间戳时 必须为年/月/日 时：分：秒
+
