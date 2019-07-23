@@ -15,3 +15,4 @@
 ### 7 :maxTime="maxTime"  传入最大可选择时间 如20:00 默认为：23:59
 ![image](https://github.com/lanxiujuan/dateTime/blob/master/images/img5.jpg)			
 				
+- 2019-07-23 更新
