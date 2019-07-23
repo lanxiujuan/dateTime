@@ -1,4 +1,6 @@
+
 # dateTime 日期时间选择组件  基于uniapp 
+# 详细demo请到GitHub下载 bug补丁有更新
 ![image](https://github.com/lanxiujuan/dateTime/blob/master/images/img1.jpg)
 ### 1 :value="childValue" 传入时间  回显
 
@@ -11,4 +13,5 @@
 ### 6 :minTime="minTime" 传入最小可选择时间 如9:00 默认为00:00
 ![image](https://github.com/lanxiujuan/dateTime/blob/master/images/img4.jpg)	
 ### 7 :maxTime="maxTime"  传入最大可选择时间 如20:00 默认为：23:59
-![image](https://github.com/lanxiujuan/dateTime/blob/master/images/img5.jpg)				
+![image](https://github.com/lanxiujuan/dateTime/blob/master/images/img5.jpg)			
+				

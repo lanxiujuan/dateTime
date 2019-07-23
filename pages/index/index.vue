@@ -3,8 +3,8 @@
 			<view class="item">
 			<div class="lable">限定最小选择日期：</div>
 			<view class="time">
-				<dy-Datetime-Picker  :placeholder="placeholder" :maxDate="maxDate"
-				 :minDate="minDate" @getData="getData" :timeIntervalMsec="timeIntervalMsec"
+				<dy-Datetime-Picker  :placeholder="placeholder" :maxDate="defaultMaxDate"
+				 :minDate="defaultMinDate" @getData="getData" :timeIntervalMsec="timeIntervalMsec"
 				 :type="timeType"></dy-Datetime-Picker>
 			</view>
 		</view>
@@ -12,7 +12,7 @@
 		<view class="item">
 			<div class="lable">限定最大选择日期：</div>
 			<view class="time">
-				<dy-Datetime-Picker :placeholder="placeholder" :maxDate="maxDate" @getData="getData"></dy-Datetime-Picker>
+				<dy-Datetime-Picker :placeholder="placeholder" :maxDate="defaultMaxDate" @getData="getData"></dy-Datetime-Picker>
 			</view>
 		</view>
 
@@ -20,8 +20,8 @@
 	<view class="item">
 			<div class="lable">指定开始结束时间：</div>
 			<view class="time">
-				<dy-Datetime-Picker :placeholder="placeholder" :maxDate="maxDate"
-				 :minDate="minDate" :minTime="minTime" :maxTime="maxTime" @getData="getData" 
+				<dy-Datetime-Picker :placeholder="placeholder" :maxDate="defaultMaxDate"
+				 :minDate="defaultMinDate" :minTime="minTime" :maxTime="maxTime" @getData="getData" 
 				 :type="timeType"></dy-Datetime-Picker>
 			</view>
 		</view>
@@ -31,8 +31,8 @@
 		<view class="item">
 			<div class="lable">指定时间选项：</div>
 			<view class="time">
-				<dy-Datetime-Picker :value="childValue" :placeholder="placeholder" :timeOptions="timeOptions" :maxDate="maxDate"
-				 :minDate="minDate" :minTime="minTime" :maxTime="maxTime" @getData="getData" :timeIntervalMsec="timeIntervalMsec"
+				<dy-Datetime-Picker :value="childValue" :placeholder="placeholder" :timeOptions="timeOptions" :maxDate="defaultMaxDate"
+				 :minDate="defaultMinDate" :minTime="minTime" :maxTime="maxTime" @getData="getData" :timeIntervalMsec="timeIntervalMsec"
 				 :type="timeType"></dy-Datetime-Picker>
 			</view>
 		</view>
@@ -51,14 +51,11 @@
 		data() {
 			return {
 
-				childValue: '2013-10-12 03:30',
+				childValue: '2013/10/12 03:30',
 				placeholder: '请选择开始时间',
-				// 最小日期
-				minDate: '2011-10-12',
-				// 最大日期
-				maxDate: '2019-08-12',
-				defaultMinDate: new Date('2001-1-3').getTime(),
-				defaultMaxDate: new Date('2050-12-31').getTime(),
+			
+				defaultMinDate: new Date('2001/1/3').getTime(),
+				defaultMaxDate: new Date('2050/12/31').getTime(),
 				// 最小时间
 				minTime: '10:00',
 				// 最大时间
@@ -78,9 +75,8 @@
 			}
 		},
 		onLoad() {
-
 			this.timeOptions = [
-				'9:00-12:00',
+				' 9:00-12:00',
 				'13:00-18:00',
 				'18:00-23:00',
 			]
@@ -125,5 +121,8 @@
 		left: 10px;
 		top: 0px;
 		color: #333333;
+	}
+	uni-picker-view-column{
+		font-size: 24rpx;
 	}
 </style>
